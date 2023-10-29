@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "获取用户信息",
+  "usingComponents": {
+    "list": "antd-mini/es/List/index",
+    "list-item": "antd-mini/es/List/ListItem/index"
+  }
+}

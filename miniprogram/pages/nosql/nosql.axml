@@ -1,0 +1,16 @@
+
+<view class="page">
+  <view class="page-section">
+    <input class="input"  value="{{name}}"  onInput="bindInput" placeholder="输入用户名称" />
+  </view>
+  <view class="page-section">
+    <button  onTap="addUser" type="primary" > 添加用户 </button> 
+  </view>
+  <view class="page-section">
+      <list  radius="{{radius}}">
+        <list-item a:for="{{users}}" >
+            <view style="float:left" >{{item.name}}</view><view data-id="{{item['_id']}}" style="float:right;color:#0099FF" onTap="deleteUser" >删除</view>
+        </list-item>
+      </list>
+  </view>
+</view>

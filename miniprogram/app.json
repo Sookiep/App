@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/oss/oss",
+    "pages/openid/openid",
+    "pages/helloworld/helloworld",
+    "pages/openapis/getOpenIDMT/getOpenIDMT",
+    "pages/openapis/getPhoneNumber/getPhoneNumber",
+    "pages/openapis/getQrcode/getQrcode",
+    "pages/layer/layer",
+    "pages/nosql/nosql",
+    "pages/cloudOpenapis/getQrcode/getQrcode",
+    "pages/redis/redis",
+    "pages/mysql/index",
+    "pages/faassdk/faassdk",
+    "pages/get-user-info/get-user-info",
+    "pages/ocr-list/ocr-list",
+    "pages/result/result"
+  ],
+  "window": {
+    "defaultTitle": "支付宝云开发学堂"
+  }
+}

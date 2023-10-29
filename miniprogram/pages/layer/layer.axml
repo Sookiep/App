@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="page-section">
+      <view  class="page-section-demo" >
+          a: <input class="input" value="{{a}}"   placeholder="输入整数"  data-vname="a"  onInput="bindInput" />
+      </view>
+      <view  class="page-section-demo" >
+          b: <input class="input" value="{{b}}"   placeholder="输入整数" data-vname="b"  onInput="bindInput" />
+      </view>
+      <view a:if="{{data!=null}}" class="page-section-demo" style="height:50px;text-align:center" >
+        a+b = {{data}}
+      </view>
+      <button  a:if="{{data==null}}" type="primary" onTap="useLayer" >调用使用层管理的函数</button>
+      <button  a:if="{{data!=null}}" type="primary" onTap="useLayer" >重新计算</button>
+  </view>
+</view>

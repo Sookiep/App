@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="page-section">
+      <view>
+        <view>openid:{{data.OPENID}}</view>
+        <view>appid:{{data.APPID}}</view>
+      </view>
+      <button  a:if="{{data==null}}" type="primary" onTap="getOpenID" >获取数据</button>
+      <button  a:if="{{data!=null}}" type="primary" onTap="getOpenID" >重新获取</button>
+  </view>
+</view>

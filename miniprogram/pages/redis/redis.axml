@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="page-section">
+      <view class="page-section-demo" style="height:50px;text-align:left" >
+          key：<input class="input"  value="{{key}}" data-name="key" onInput="bindInput" placeholder="输入key" />
+      </view>
+      <view class="page-section-demo" style="height:50px;text-align:left" >
+          value：<input class="input"  value="{{value}}" data-name="value"   onInput="bindInput" placeholder="输入 value " />
+      </view>
+      <button   type="primary" onTap="setValue" >设置缓存</button>
+  </view>
+  <view class="page-section">
+    <view  class="page-section-demo" style="height:50px;text-align:left" >
+        key：<input class="input"  value="{{skey}}" data-name="skey"  onInput="bindInput" placeholder="输入key" />
+    </view>
+    <view  class="page-section-demo" style="height:50px;text-align:left" >
+       value:{{svalue}}
+    </view>
+    <button   type="primary" onTap="getValue" >获取缓存</button>
+</view>
+</view>

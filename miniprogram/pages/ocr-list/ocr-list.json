@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tabs": "antd-mini/es/Tabs/index"
+  },
+  "styleIsolation": "apply-shared"
+}

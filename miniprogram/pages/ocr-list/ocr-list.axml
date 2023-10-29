@@ -1,0 +1,18 @@
+<view class="container">
+  <block a:for="{{tabs}}">
+    <!-- OCR -->
+    <view class="tab-content-container">
+      <view a:for="{{IMAGE_TECHNOLOGY}}" a:for-item="imgTechItem" class="tech-container">
+        <view class="content-titile">{{imgTechItem.title}}</view>
+        <!-- OCR.list -->
+        <view a:for="{{imgTechItem.list}}" a:for-item="OCRItem" class="content-item-container">
+          <!-- OCR及其他 -->
+          <navigator class="content-item" url="/pages/result/result?type={{OCRItem.value}}">
+            <image class="icon" mode="scaleToFill" src="{{OCRItem.iconUrl}}" />
+            <text class='item-title'>{{OCRItem.text}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+</block>
+</view>

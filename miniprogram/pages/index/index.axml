@@ -1,0 +1,61 @@
+
+<view>
+  <view class="banner">
+    <view class="logo" style="opacity: {{titleOpacity}}"><image src="/image/component_logo.png" mode="aspectFit" /></view>
+    <view class="title" style="opacity: {{titleOpacity}}">云开发</view>
+    <view class="sub-title"style="opacity: {{titleOpacity}}">支付宝云开发是基于 Serverless 的一站式小程序后端服务开发平台，支持动态扩缩容低投入，前后端一体化高效研发，简化开发流程，提高研发效率。</view>
+  </view>
+  <list header="云函数"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/helloworld/helloworld" hover-class="navigator-hover"> hello world </navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/openid/openid" hover-class="navigator-hover"> 获取 openId </navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/layer/layer" hover-class="navigator-hover"> 层管理 </navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/faassdk/faassdk" hover-class="navigator-hover"> Web SDK </navigator>
+    </list-item>
+  </list>
+  <list header="云数据库"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/nosql/nosql" hover-class="navigator-hover">数据查询</navigator>
+    </list-item>
+  </list>
+  <list header="云存储"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/oss/oss" hover-class="navigator-hover">文件管理</navigator>
+    </list-item>
+  </list>
+  <list header="Redis"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/redis/redis" hover-class="navigator-hover">缓存管理</navigator>
+    </list-item>
+  </list>
+  <list header="云调用"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/cloudOpenapis/getQrcode/getQrcode" hover-class="navigator-hover">小程序二维码</navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/get-user-info/get-user-info" hover-class="navigator-hover">获取用户信息</navigator>
+    </list-item>
+    <!-- AI 算法还在灰度中 ，暂时不提供演示  
+    <list-item>
+      <navigator open-type="navigate" url="/pages/ocr-list/ocr-list" hover-class="navigator-hover">OCR</navigator>
+    </list-item>
+    -->
+  </list>
+  <list header="公私钥调用"  radius="{{radius}}">
+    <list-item>
+      <navigator open-type="navigate" url="/pages/openapis/getOpenIDMT/getOpenIDMT" hover-class="navigator-hover">  userId 和头像 </navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/openapis/getPhoneNumber/getPhoneNumber" hover-class="navigator-hover">手机号</navigator>
+    </list-item>
+    <list-item>
+      <navigator open-type="navigate" url="/pages/openapis/getQrcode/getQrcode" hover-class="navigator-hover">小程序二维码</navigator>
+    </list-item>
+  </list>
+</view>

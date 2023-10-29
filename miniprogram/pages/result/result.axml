@@ -1,0 +1,62 @@
+<view class="container">
+  <view class="image-container">
+    <view a:if="{{isScanVisible}}" class="scan-line" />
+    <image class="result-image" mode="aspectFit" src="{{pageImgUrl||ocrItem.demoImgUrl}}" />
+  </view>
+  <!-- 通用文字 -->
+  <view a:if="{{type==='commonOcr'}}" class="result-content" style="{{
+    paddingBottom: '200rpx'
+  }}">
+    <view a:for="{{infoList}}" a:for-item="infoItem" class="result-item">
+      <view class="value">{{infoItem.content}}</view>
+    </view>
+  </view>
+  <!-- 身份证识别、垃圾分类、营业执照、菜单识别、银行卡-->
+  <view a:if='{{type==="idCard" 
+    || type==="refuseClassification" 
+    || type === "businessLicense"
+  || type==="menuRecognition"
+|| type==="bankCard"}}' class="result-content" style="{{
+    paddingBottom: '200rpx'
+  }}">
+    <view a:for="{{showList}}" a:for-item="infoItem" class="result-item" style="{{
+      alignItems: 'baseline',
+      marginBottom: '10px'
+    }}">
+      <view class="title" style="{{
+        minWidth: '100px'
+      }}">
+        {{infoItem.name}}
+      </view>
+      <view class="value">
+        {{infoItem.content}}
+      </view>
+    </view>
+  </view>
+  <!-- 身份证防伪识别、还原清晰度 -->
+  <view a:if='{{type==="idCardSecurity" || type === "restoreClarity"}}' class="result-content">
+    <image
+      class="result-image"
+      style="{{
+      marginTop: '90px', height: '200px'
+    }}"
+      mode="aspectFit"
+      src='{{type==="idCardSecurity" ? infoList.mask : infoList.afts_url}}'
+      data-imgSrc='{{type==="idCardSecurity" ? infoList.mask : infoList.afts_url}}'
+      onTap="previewImg"
+    />
+  </view>
+  <!-- 营业执照 -->
+  <view a:if='{{type==="businessLicense"}}' class="result-content">
+    <view a:for="{{Object.keys(infoList)}}" a:for-item="infoItem" class="result-item">
+      <view class="value">{{infoItem}}</view>
+    </view>
+  </view>
+  <view class="footer">
+    <view>
+      <button type="primary" onTap="handleTakeCamera">拍照识别</button>
+    </view>
+    <view class="bottom-gap" style="{{style}}"></view>
+  </view>
+
+</view>

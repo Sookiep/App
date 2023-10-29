@@ -1,0 +1,10 @@
+<view class="page">
+  <view class="page-section">
+      <image a:if="{{url!=null}}"  class="image"  src="{{url}}" />
+      <view a:if="{{url==null}}"   class="page-section-demo" style="height:50px;text-align:center" >
+         点击上传文件
+      </view>
+      <button  a:if="{{url==null}}" type="primary" onTap="upload" >上传文件</button>
+      <button  a:if="{{url!=null}}" type="primary" onTap="upload" >重新上传</button>
+  </view>
+</view>
